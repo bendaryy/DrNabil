@@ -604,6 +604,8 @@
                                                             <input type="number" class="form-control" name="rate[]"
                                                                 id="rate" class="form-control form-control-sm"
                                                                 onkeyup="findTotalt2Amount()"
+                                                                value="10"
+                                                                readonly
                                                                 onmouseover="findTotalt2Amount()" placeholder="@lang("
                                                                 site.Tax_added")">
                                                         </div>
@@ -881,7 +883,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for="lineTaxAdd" class="form-label">@lang("site.Tax_added")</label>
-                                        <input type="number" class="form-control" name="rate[]" id="rate${i}" class="form-control form-control-sm"
+                                        <input type="number" class="form-control" name="rate[]" value="10" readonly id="rate${i}" class="form-control form-control-sm"
                                             onkeyup="findTotalt2Amount()" onmouseover="findTotalt2Amount()" placeholder="@lang("site.Tax_added")">
                                     </div>
                                 </div>
