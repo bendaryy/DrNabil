@@ -970,25 +970,25 @@
                 $('<script> function operation' + i +
                     '(value) {var x, y, z;  var quantity = document.getElementById("quantity' + i +
                     '").value; x = value * quantity; document.getElementById("salesTotal' + i +
-                    '").value = x.toFixed(5);};  function proccess' + i +
+                    '").value = x.toFixed(2);};  function proccess' + i +
                     '(value) {var x, y, z;  var amounEGP = document.getElementById("amountEGP' + i +
                     '").value; y = value * amounEGP; document.getElementById("salesTotal' + i +
-                    '").value = y.toFixed(5);};function discount' + i +
+                    '").value = y.toFixed(2);};function discount' + i +
                     '(value) {var salesTotal, netTotal, z, t2valueEnd, t1Value, rate, t4rate, t4Amount; salesTotal = document.getElementById("salesTotal' +
                     i +
                     '").value; netTotal = salesTotal - value; netTotalEnd = document.getElementById("netTotal' +
-                    i + '").value = netTotal.toFixed(5); rate = document.getElementById("rate' + i +
+                    i + '").value = netTotal.toFixed(2); rate = document.getElementById("rate' + i +
                     '").value; t4rate = document.getElementById("t4rate' + i +
                     '").value;  t2valueEnd = document.getElementById("t2' + i +
-                    '").value = ((netTotalEnd * rate) / 100).toFixed(5); t4Amount = document.getElementById("t4Amount' +
+                    '").value = ((netTotalEnd * rate) / 100).toFixed(2); t4Amount = document.getElementById("t4Amount' +
                     i +
-                    '").value = ((netTotal * t4rate) / 100).toFixed(5);}; function itemsDiscountValue' +
+                    '").value = ((netTotal * t4rate) / 100).toFixed(2);}; function itemsDiscountValue' +
                     i +
                     '(value) {var x, netTotal, t1amount, t2amount, t4Amount;netTotal = document.getElementById("netTotal' +
                     i + '").value;t2amount = document.getElementById("t2' + i +
                     '").value;t4Amount = document.getElementById("t4Amount' + i +
                     '").value;x = parseFloat(netTotal) + parseFloat(t2amount) - parseFloat(t4Amount) - parseFloat(value);document.getElementById("totalItemsDiscount' +
-                    i + '").value = x.toFixed(5);};  </' + 'script>').appendTo('#test123');
+                    i + '").value = x.toFixed(2);};  </' + 'script>').appendTo('#test123');
                 $(document).on('click', '.btn_remove', function() {
                     var button_id = $(this).attr("id");
                     $("#row" + button_id + "").remove()
@@ -1015,27 +1015,27 @@
             var x, y, z;
             var quantity = document.getElementById("quantity").value;
             x = value * quantity;
-            document.getElementById("salesTotal").value = x.toFixed(5);
+            document.getElementById("salesTotal").value = x.toFixed(2);
         };
 
         function proccess(value) {
             var x, y, z;
             var amounEGP = document.getElementById("amountEGP").value;
             y = value * amounEGP;
-            document.getElementById("salesTotal").value = y.toFixed(5);
+            document.getElementById("salesTotal").value = y.toFixed(2);
         };
 
         function discount(value) {
             var salesTotal, netTotal, z, t2valueEnd, t1Value, rate, t4rate, t4Amount;
             salesTotal = document.getElementById("salesTotal").value;
             netTotal = salesTotal - value;
-            netTotalEnd = document.getElementById("netTotal").value = netTotal.toFixed(5);
+            netTotalEnd = document.getElementById("netTotal").value = netTotal.toFixed(2);
             rate = document.getElementById("rate").value;
             t4rate = document.getElementById("t4rate").value;
             t2valueEnd = document.getElementById("t2").value =
-                ((netTotalEnd * rate) / 100).toFixed(5);
+                ((netTotalEnd * rate) / 100).toFixed(2);
             t4Amount = document.getElementById("t4Amount").value =
-                ((netTotal * t4rate) / 100).toFixed(5);
+                ((netTotal * t4rate) / 100).toFixed(2);
         }
 
         function itemsDiscountValue(value) {
@@ -1048,14 +1048,14 @@
                 parseFloat(t2amount) -
                 parseFloat(t4Amount) -
                 parseFloat(value);
-            document.getElementById("totalItemsDiscount").value = x.toFixed(5);
+            document.getElementById("totalItemsDiscount").value = x.toFixed(2);
         }
 
         function Extradiscount(value) {
             var totalDiscount, x;
             totalDiscount = document.getElementById("totalAmount").value;
             x = totalDiscount - value;
-            document.getElementById("totalAmount2").value = x.toFixed(5);
+            document.getElementById("totalAmount2").value = x.toFixed(2);
         }
 
         function findTotalDiscountAmount() {
@@ -1066,7 +1066,7 @@
                     tot += parseFloat(arr[i].value);
                 }
             }
-            document.getElementById("totalDiscountAmount").value = tot.toFixed(5);
+            document.getElementById("totalDiscountAmount").value = tot.toFixed(2);
         }
 
         function findTotalSalesAmount() {
@@ -1077,7 +1077,7 @@
                     tot += parseFloat(arr[i].value);
                 }
             }
-            document.getElementById("TotalSalesAmount").value = tot.toFixed(5);
+            document.getElementById("TotalSalesAmount").value = tot.toFixed(2);
         }
 
         function findTotalNetAmount() {
@@ -1088,7 +1088,7 @@
                     tot += parseFloat(arr[i].value);
                 }
             }
-            document.getElementById("TotalNetAmount").value = tot.toFixed(5);
+            document.getElementById("TotalNetAmount").value = tot.toFixed(2);
         }
 
         function findTotalt4Amount() {
@@ -1099,7 +1099,7 @@
                     tot += parseFloat(arr[i].value);
                 }
             }
-            document.getElementById("totalt4Amount").value = tot.toFixed(5);
+            document.getElementById("totalt4Amount").value = tot.toFixed(2);
         }
 
         function findTotalt2Amount() {
@@ -1110,7 +1110,7 @@
                     tot += parseFloat(arr[i].value);
                 }
             }
-            document.getElementById("totalt2Amount").value = tot.toFixed(5);
+            document.getElementById("totalt2Amount").value = tot.toFixed(2);
         }
 
         function findTotalAmount() {
@@ -1121,7 +1121,7 @@
                     tot += parseFloat(arr[i].value);
                 }
             }
-            document.getElementById("totalAmount").value = tot.toFixed(5);
+            document.getElementById("totalAmount").value = tot.toFixed(2);
         }
 
         function findTotalItemsDiscountAmount() {
@@ -1132,7 +1132,7 @@
                     tot += parseFloat(arr[i].value);
                 }
             }
-            document.getElementById("totalItemsDiscountAmount").value = tot.toFixed(5);
+            document.getElementById("totalItemsDiscountAmount").value = tot.toFixed(2);
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
